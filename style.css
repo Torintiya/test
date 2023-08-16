@@ -1,0 +1,576 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap_recomendations {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url(img/Test_page_desktop.webp);
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(font/FiraSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Tovari Sans";
+  src: url(font/tovari-sans.otf);
+}
+
+.inner {
+  margin-left: 195px;
+  margin-right: 195px;
+  margin-top: 60px;
+  margin-bottom: 120px;
+}
+
+.recommendations_back_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.recommendations_back {
+  color: #fff;
+  font-family: Fira Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.recommendations_back svg {
+  margin-right: 10px;
+}
+
+.recommendations_back path {
+  fill: white;
+  transition: fill 0.3s ease-in-out;
+}
+
+.recommendations_back:hover path {
+  fill: #ffa627;
+}
+
+.recommendations_back:hover {
+  color: #ffa627;
+}
+
+.recommendations_test {
+  color: #fff;
+  font-family: Fira Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.recommendations_university {
+  border-radius: 32px;
+  background: #d3d5ff;
+}
+
+.university_content {
+  padding: 100px 155px;
+}
+
+.university_text,
+.university_number {
+  color: #131545;
+  font-family: Fira Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.atlas_link {
+  color: #131545;
+  transition: color 0.3s ease-in-out;
+}
+
+.atlas_link:hover {
+  color: #ffa627;
+}
+
+.university_number {
+  margin-top: 20px;
+}
+
+.university_title {
+  color: #131545;
+  font-family: Tovari Sans;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 60px 0;
+}
+
+.university_accordion {
+  color: #131545;
+  font-family: Fira Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  padding-left: 10px;
+}
+
+.university_names {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #979ae2;
+}
+
+.university_list {
+  margin-bottom: 60px;
+}
+
+.recommendations_button_conteiner {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.recommendations_button_mail {
+  outline: none;
+  border: none;
+  padding: 20px 40px;
+  max-width: max-content;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  background: #ff4303;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin-right: 40px;
+}
+
+.recommendations_button_mail:hover {
+  background: linear-gradient(92.87deg, #ff4303 15.49%, #ffa627 115.7%);
+  box-shadow: 0px 0px 6px rgba(166, 186, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.recommendations_button_mail:focus-visible {
+  outline: 2px solid #ff4303;
+  background: white;
+  color: #ff4303;
+}
+
+.recommendations_button_mail:active {
+  outline: 2px solid #ff4303;
+  background: white;
+  color: #ff4303;
+}
+
+.recommendations_button_mail:disabled {
+  background: rgba(255, 67, 3, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  transform: none;
+  border: none;
+  box-shadow: none;
+  cursor: auto;
+}
+
+.recommendations_button_download {
+  outline: none;
+  border: none;
+  padding: 20px 40px;
+  max-width: max-content;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ff4303;
+  background: #ffffff;
+  border: 2px solid #ff4303;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recommendations_button_download:hover {
+  background: #ff4303;
+  box-shadow: 0px 0px 6px rgba(166, 186, 255, 0.5);
+  border-radius: 32px;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.recommendations_button_download:active {
+  border: 2px solid #ff4303;
+  border-radius: 32px;
+  background-color: white;
+  color: #ff4303;
+}
+
+.recommendations_button_download:disabled {
+  border: 2px solid rgba(255, 67, 3, 0.5);
+  border-radius: 32px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Аккордеон */
+
+.university_names input,
+.university_about {
+  display: none;
+}
+
+.university_accordion::after {
+  content: url(img/arrow-down.svg);
+  float: right;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.university_names :checked + .university_accordion::after {
+  content: url(img/arrow-up.svg);
+  padding-right: 10px;
+}
+
+.university_names :checked ~ .university_about {
+  display: block;
+}
+
+label {
+  width: 100%;
+  cursor: pointer;
+}
+
+.university_about {
+  margin-top: 10px;
+}
+
+/* Конец аккордеона */
+
+.university_card {
+  border-radius: 0px 0px 28px 28px;
+  background: #f0f0ff;
+  padding: 20px;
+}
+
+.card_text {
+  color: #131545;
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.card_title {
+  color: #131545;
+  font-family: Fira Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 40px;
+}
+
+.card_subtitle {
+  color: #131545;
+  font-family: Fira Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 10px;
+  text-decoration: none;
+  margin-right: 195px;
+  transition: color 0.3s ease-in-out;
+}
+
+.card_top {
+  margin-top: 40px;
+}
+
+.card_subtitle_wrap {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 40px;
+}
+
+.card_contacts {
+  display: flex;
+  margin-top: 40px;
+}
+
+.card_contacts_row {
+  display: flex;
+}
+
+.card_item {
+  color: #131545;
+  font-family: Fira Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.card_item path {
+  fill: #131545;
+  transition: fill 0.3s ease-in-out;
+}
+
+.card_item:hover path {
+  fill: #ffa627;
+}
+
+.card_item:hover {
+  color: #ffa627;
+}
+
+.card_subtitle_link:hover {
+  color: #ffa627;
+}
+
+.card_flex {
+  display: flex;
+  align-items: center;
+}
+
+.card_item1,
+.card_item2 {
+  margin-right: 150px;
+}
+
+.card_flex svg {
+  margin-right: 8px;
+}
+
+/* Адаптив */
+
+@media (max-width: 1700px) {
+  .inner {
+    margin-left: 125px;
+    margin-right: 125px;
+  }
+
+  .university_content {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .university_names {
+    margin: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1610px) {
+  .university_text,
+  .university_number,
+  .university_accordion {
+    font-size: 22px;
+  }
+
+  .university_title {
+    font-size: 60px;
+  }
+
+  .recommendations_button_mail,
+  .recommendations_button_download,
+  .recommendations_test,
+  .recommendations_back {
+    font-size: 20px;
+  }
+
+  .card_subtitle {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1500px) {
+  .inner {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+
+  .university_content {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  .card_item1,
+  .card_item2 {
+    margin-right: 120px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .inner {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .card_item1,
+  .card_item2 {
+    margin-right: 90px;
+  }
+
+  .card_subtitle_wrap {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .university_text,
+  .university_number,
+  .university_accordion {
+    font-size: 20px;
+  }
+
+  .university_title {
+    font-size: 40px;
+  }
+
+  .recommendations_button_mail,
+  .recommendations_button_download,
+  .recommendations_test,
+  .recommendations_back {
+    font-size: 16px;
+  }
+
+  .university_list {
+    margin-bottom: 40px;
+  }
+
+  .recommendations_button_conteiner {
+    margin-top: 40px;
+  }
+
+  .university_title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .card_item1,
+  .card_item2 {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1110px) {
+  body {
+    background-image: url(img/test_page_tablet.webp);
+    background-size: cover;
+  }
+
+  .recommendations_button_mail,
+  .recommendations_button_download {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .card_contacts {
+    flex-direction: column;
+  }
+
+  .card_item1 {
+    margin-bottom: 44px;
+  }
+}
+
+@media (max-width: 950px) {
+  .university_text,
+  .university_number,
+  .university_accordion,
+  .card_subtitle,
+  .card_item {
+    font-size: 16px;
+  }
+
+  .card_title {
+    font-size: 22px;
+  }
+
+  .university_content {
+    padding: 70px 50px;
+  }
+}
+
+@media (max-width: 780px) {
+  .card_title,
+  .card_item1 {
+    margin-bottom: 20px;
+  }
+
+  .card_top,
+  .card_subtitle_wrap,
+  .card_contacts {
+    margin-top: 20px;
+  }
+
+  .university_text,
+  .university_number,
+  .university_accordion,
+  .card_subtitle,
+  .card_item,
+  .card_text {
+    font-size: 14px;
+  }
+
+  .card_title {
+    font-size: 20px;
+  }
+
+  .university_content {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card_subtitle_wrap,
+  .recommendations_button_conteiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card_date {
+    margin-bottom: 20px;
+  }
+  
+  .card_subtitle_link {
+    text-decoration: underline;
+  }
+
+  .card_contacts_row {
+    flex-direction: column;
+  }
+
+  .card_item1, .card_item2 {
+    margin-bottom: 12px;
+  }
+
+  .recommendations_button_conteiner {
+    align-items: center;
+  }
+
+  .recommendations_button_mail {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
